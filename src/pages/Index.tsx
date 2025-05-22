@@ -31,7 +31,7 @@ const Index = () => {
   };
 
   const generateAngularCode = async () => {
-    if (!fileId || !pageName) {
+    if (!fileId ) {  //!fileId || !pageName
       toast.error("Please enter both File ID and Page Name.");
       return;
     }
@@ -70,11 +70,11 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">
+          {/* <h1 className="text-4xl font-bold text-gray-800 mb-2">
             Figma to Angular Converter
-          </h1>
+          </h1> */}
           <p className="text-lg text-gray-600">
-            Paste your File ID and Page Name to generate Angular code
+            Paste your File ID {/*and Page Name*/} to generate Angular code
           </p>
         </div>
 
@@ -82,7 +82,7 @@ const Index = () => {
           <CardHeader>
             <CardTitle>Enter Your Design Details</CardTitle>
             <CardDescription>
-              Provide the Figma file ID and the specific page name
+               Provide the Figma file ID {/*and the specific page name */}
             </CardDescription>
           </CardHeader>
 
@@ -92,11 +92,11 @@ const Index = () => {
               value={fileId}
               onChange={(e) => setFileId(e.target.value)}
             />
-            <Input
+            {/* <Input
               placeholder="Page Name"
               value={pageName}
               onChange={(e) => setPageName(e.target.value)}
-            />
+            /> */}
           </CardContent>
 
           <CardFooter className="flex flex-col sm:flex-row gap-4 justify-between pt-4 border-t">
